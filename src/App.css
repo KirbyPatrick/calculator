@@ -1,0 +1,23 @@
+.wrapper {
+  width: 50%;
+}
+
+.gridClass {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1em;
+}
+
+.center {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+.boxy {
+  border: dotted red;
+}
+
+.gridClass > button {
+  background: #eee;
+}
