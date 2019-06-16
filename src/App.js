@@ -1,20 +1,13 @@
 import React from "react";
-import Button from "@material-ui/core/Button";
 import "./App.css";
+import CalculatorButtons from "./components/CalculatorButtons";
+import Results from "./components/Results";
 
 function App() {
   return (
     <div className="wrapper center">
-      <div className="gridClass">
-        <Button>test</Button>
-        <Button>test</Button>
-        <Button>test</Button>
-        <Button>test</Button>
-        <Button>test</Button>
-        <Button>test</Button>
-        <Button>test</Button>
-        <Button>test</Button>
-      </div>
+      <Results />
+      <CalculatorButtons />
     </div>
   );
 }

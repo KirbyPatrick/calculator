@@ -1,5 +1,6 @@
 .wrapper {
   width: 50%;
+  background: skyblue;
 }
 
 .gridClass {
@@ -12,6 +13,7 @@
   margin: auto;
   width: 50%;
   padding: 10px;
+  text-align: center;
 }
 
 .boxy {
@@ -20,4 +22,8 @@
 
 .gridClass > button {
   background: #eee;
+}
+
+p {
+  font-size: 5em;
 }
