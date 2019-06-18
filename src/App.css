@@ -11,7 +11,8 @@
 
 .center {
   margin: auto;
-  width: 50%;
+  max-width: 400px;
+  min-width: 300px;
   padding: 10px;
   text-align: center;
 }
@@ -25,5 +26,6 @@
 }
 
 p {
+  margin: 10px;
   font-size: 5em;
 }
