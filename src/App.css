@@ -30,6 +30,13 @@ p {
   font-size: 5em;
 }
 
-.fab {
-  background-color: black;
+.resetButtonGrid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 1em;
+}
+
+.resetButtonGrid > button {
+  background: #eee;
+  margin-top: 2em;
 }

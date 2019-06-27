@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Button from "@material-ui/core/Button";
-import Fab from "@material-ui/core/Fab";
 
 class CalculatorButtons extends Component {
   render() {
@@ -66,6 +65,9 @@ class CalculatorButtons extends Component {
           <Button name="+" onClick={e => this.props.onClick(e.target.name)}>
             +
           </Button>
+        </div>
+        <div className="resetButtonGrid">
+          <Button>Reset</Button>
         </div>
       </div>
     );
