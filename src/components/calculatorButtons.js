@@ -66,8 +66,13 @@ class CalculatorButtons extends Component {
             +
           </Button>
         </div>
+
+        {/* Reset button to clear state */}
+
         <div className="resetButtonGrid">
-          <Button>Reset</Button>
+          <Button name="reset" onClick={e => this.props.onClick(e.target.name)}>
+            Reset
+          </Button>
         </div>
       </div>
     );
