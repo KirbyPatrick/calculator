@@ -47,7 +47,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <div className="calculator-body">
+        <div className="wrapper center">
           <h1>Simple Calculator</h1>
           <ResultComponent result={this.state.result} />
           <CalculatorButtons onClick={this.onClick} />
