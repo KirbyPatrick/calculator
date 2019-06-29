@@ -1,21 +1,22 @@
 import React, { Component } from "react";
 import "./App.css";
-import CalculatorButtons from "./components/CalculatorButtons";
 import ResultComponent from "./components/ResultComponent";
+import CalculatorButtons from "./components/CalculatorButtons";
+import ResetButton from "./components/ResetButton";
 
 class App extends Component {
   constructor() {
     super();
 
     this.state = {
-      result: "0"
+      result: ""
     };
   }
 
   onClick = button => {
-    if (button === "Enter") {
+    if (button === "=") {
       this.calculate();
-    } else if (button === "Reset") {
+    } else if (button === "reset") {
       this.reset();
     } else {
       this.setState({
@@ -27,7 +28,8 @@ class App extends Component {
   calculate = () => {
     try {
       this.setState({
-        result: (eval(this.setState.result) || "0") + "0"
+        // eslint-disable-next-line
+        result: (eval(this.state.result) || "") + ""
       });
     } catch (e) {
       this.setState({
@@ -44,10 +46,13 @@ class App extends Component {
 
   render() {
     return (
-      <div className="wrapper center">
-        <h1>Simple Calculator</h1>
-        <ResultComponent result={this.state.result} />
-        <CalculatorButtons onClick={this.onClick} />
+      <div>
+        <div className="calculator-body">
+          <h1>Simple Calculator</h1>
+          <ResultComponent result={this.state.result} />
+          <CalculatorButtons onClick={this.onClick} />
+          <ResetButton onClick={this.reset} />
+        </div>
       </div>
     );
   }
